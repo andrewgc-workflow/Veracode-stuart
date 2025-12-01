@@ -147,8 +147,7 @@ jobs:
           repo_name: ${{ github.event.client_payload.repository.name }}
           recursive: true
           allow-dirty: true
-          breakBuildOnPolicyFindings: ${{ github.event.client_payload.user_config.break_build_policy_findings }}
-
+          
   cleanup:
     needs: veracode-sca-scan
     if: always()
